@@ -47,6 +47,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Weather App',
       favicon: './src/images/favicon.svg',
+      meta: { 'http-equiv': 'Content-Security-Policy', content: 'upgrade-insecure-requests' },
     }),
   ],
 }
