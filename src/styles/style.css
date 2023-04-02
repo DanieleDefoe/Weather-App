@@ -1,0 +1,180 @@
+@import url(../../node_modules/normalize.css/normalize.css);
+@import url(../fonts/poppin.css);
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --main-background: #123;
+  --main-text-color: #fff;
+  --header-height: clamp(100px, 15vh, 400px);
+}
+
+body {
+  max-width: 1660px;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(90deg, #1D2B64, #F8CDDA);
+  font-family: Poppins, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0 auto;
+}
+
+
+
+/* HEADER START */
+.header {
+  width: 100%;
+  min-height: var(--header-height);
+  background: var(--main-background);
+  border-radius: 0 0 20px 20px;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.header__icon {
+  width: 7rem;
+  height: 7rem;
+  object-fit: contain;
+}
+
+.header__title {
+  font-size: 5rem;
+  color: var(--main-text-color);
+  text-transform: capitalize;
+  margin: 0;
+  letter-spacing: 1px;
+  text-align: center;
+}
+/* HEADER END */
+
+
+
+/* MAIN START */
+.main {
+  height: calc(100% - var(--header-height));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding: 3rem 2rem;
+}
+/* MAIN END */
+
+
+
+/* FORM START */
+.weather-query-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-query-form__input {
+  font-size: 2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: none;
+  background: #11223370;
+  color: var(--main-text-color);
+}
+
+.weather-query-form__input:focus {
+  outline: 1.5px solid lightgreen;
+}
+
+.weather-query-form__submit {
+  font-size: 2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: none;
+  background: var(--main-background);
+  color: var(--main-text-color);
+  text-transform: capitalize;
+  transition: all .3s linear;
+}
+/* FORM END */
+
+
+
+/* WEATHER SECTION START */
+.weather-section {
+  width: 100%;
+  max-width: 500px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  background: var(--main-background);
+  color: var(--main-text-color);
+  border-radius: 1.5rem;
+  transition: all .3s ease-in-out;
+  text-align: center;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.weather-section__title {
+  letter-spacing: 1px;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+}
+
+.weather-section__tempo {
+  font-size: 4rem;
+}
+
+.weather-section__status-image {
+  width: 6.4rem;
+  height: 6.4rem;
+  object-fit: contain;
+}
+
+.weather-section__feels-like, .weather-section__humidity, .weather-section__wind {
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+.weather-section__status-text {
+  font-size: 2.5rem;
+  line-height: 1.5;
+}
+/* WEATHER SECTION END */
+
+
+
+/* HOVER MEDIA START */
+@media (hover: hover) {
+  .weather-query-form__submit:hover {
+    opacity: .7;
+    cursor: pointer;
+  }
+}
+/* HOVER MEDIA END */
+
+
+
+/* MEDIA QUERY START */
+@media only screen and (max-width: 500px) {
+  .weather-query-form {
+    width: 100%;
+  }
+  .weather-query-form__input {
+    width: 100%;
+  }
+}
+/* MEDIA QUERY END */
