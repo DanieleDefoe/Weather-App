@@ -60,6 +60,7 @@ body {
 
 /* MAIN START */
 .main {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -120,7 +121,6 @@ body {
   border-radius: 1.5rem;
   transition: all .3s ease-in-out;
   text-align: center;
-  box-shadow: 0 0 30px 0 linear-gradient(90deg, #1D2B64, #F8CDDA);
 }
 
 .hidden {
@@ -149,7 +149,7 @@ body {
   line-height: 1.5;
 }
 
-.weather-section__status-text {
+.weather-section__status-text, .weather-section__localtime {
   font-size: 2.5rem;
   line-height: 1.5;
 }
@@ -157,12 +157,42 @@ body {
 
 
 
+/* FOOTER START */
+.footer {
+  width: 100%;
+  background: var(--main-background);
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.footer__copyright {
+  color: var(--main-text-color);
+  font-size: 2rem;
+}
+
+.footer__icon {
+  width: 4rem;
+  height: 4rem;
+  background: url(../images/github.svg) no-repeat center / contain;
+  transition: all .3s linear;
+}
+/* FOOTER END */
+
+
+
 /* HOVER MEDIA START */
 @media (hover: hover) {
-  .weather-query-form__submit:hover {
+  .weather-query-form__submit:hover, .footer__icon:hover {
     opacity: .7;
     cursor: pointer;
   }
+
 }
 /* HOVER MEDIA END */
 
@@ -175,6 +205,11 @@ body {
   }
   .weather-query-form__input {
     width: 100%;
+  }
+
+  .footer {
+    padding: 2rem 1rem;
+    gap: 2rem;
   }
 }
 /* MEDIA QUERY END */

@@ -23,7 +23,19 @@ const createWeatherSection = (() => {
   const wind = document.createElement('p')
   wind.className = 'weather-section__wind'
 
-  weatherSection.append(title, statusImage, statusText, temperature, feelsLike, humidity, wind)
+  const localTime = document.createElement('p')
+  localTime.className = 'weather-section__localtime'
+
+  weatherSection.append(
+    title,
+    statusImage,
+    statusText,
+    temperature,
+    feelsLike,
+    humidity,
+    wind,
+    localTime,
+  )
 
   return weatherSection
 })()

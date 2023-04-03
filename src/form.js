@@ -9,6 +9,7 @@ const temperature = weatherSection.querySelector('.weather-section__tempo')
 const feelsLike = weatherSection.querySelector('.weather-section__feels-like')
 const humidity = weatherSection.querySelector('.weather-section__humidity')
 const wind = weatherSection.querySelector('.weather-section__wind')
+const localTime = weatherSection.querySelector('.weather-section__localtime')
 
 const createForm = (() => {
   const form = document.createElement('form')
@@ -39,8 +40,8 @@ const createForm = (() => {
         feelsLike.textContent = `Feels like: ${result.current.feelslike_c} °C / ${result.current.feelslike_f} °F`
         humidity.textContent = `Humidity: ${result.current.humidity}%`
         wind.textContent = `Wind: ${result.current.wind_kph} km/h`
+        localTime.textContent = result.location.localtime
         weatherSection.classList.remove('hidden')
-        console.log(result.current.condition)
       })
       .catch(() => {
         alert('BITCH, THERE IS NO SUCH CITY!')
