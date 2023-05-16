@@ -1,4 +1,31 @@
 # Weather-App
-Weather Application built using ES6 modules, ES 7 async, aslo Webpack and Babel
 
-### [check it out](https://danieledefoe.github.io/Weather-App/dist/)
+### Погода и время в любой точке планеты
+
+### Стек технологий
+- JavaScript
+- HTML5
+- CSS3
+- Git
+- Webpack
+- Babel
+- Async / Await
+- ES6 Modules
+
+### Функционал
+<p>Приложение представляет собой инпут, где можно ввести название населенного пункта. После сабмита формы отправляется запрос на сервер
+и рендерится на страницу карточка с погодой (градусы по Цельсию и Фаренгейту, скорость ветра, иконка с климатом и т.д.) и временем</p>
+
+### Это мой первый pet-проект на React и TailwindCSS
+
+### Установка зависимостей
+`npm install`
+
+### Запуск проекта на локальном сервере
+`npm run dev`
+
+### Сборка проекта
+`npm run build`
+
+### Деплой: 
+[check it out](https://danieledefoe.github.io/Weather-App/dist/)
